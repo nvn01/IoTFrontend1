@@ -14,6 +14,16 @@ Proyek ini adalah tugas akhir untuk mata kuliah Cloud Computing, yang melibatkan
 - Menghapus data mahasiswa
 - Dasbor untuk melihat catatan absensi
 
+## Screenshots
+
+### Dashboard Mahasiswa
+
+![Dashboard Mahasiswa](screenshots/Screenshot%202024-06-27%20130747.png)
+
+### History Absen Mahasiswa
+
+![History Absen Mahasiswa](screenshots/Screenshot%202024-06-27%20130756.png)
+
 ## URL Web App
 
 [URL Web App](http://frontendabsensi-env.eba-ypjm3kja.ap-southeast-2.elasticbeanstalk.com:3000/)
