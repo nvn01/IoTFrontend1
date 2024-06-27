@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT Mahasiswa</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <style>
+      .select-checkbox {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      table th:first-child,
+      table td:first-child {
+        width: 50px;
+      }
+    </style>
+    <script defer src="script.js"></script>
+    <!-- Perubahan di sini -->
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Data Mahasiswa dan Absensi</h1>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="refreshDataBtn" class="btn btn-primary">
+          Refresh Data
+        </button>
+        <div>
+          <button
+            id="insertDataBtn"
+            class="btn btn-success"
+            data-bs-toggle="modal"
+            data-bs-target="#insertDataModal"
+          >
+            Insert Data
+          </button>
+          <a href="absen.html" class="btn btn-info">Lihat History Absen</a>
+          <button id="deleteDataBtn" class="btn btn-danger">Delete</button>
+          <button id="updateDataBtn" class="btn btn-warning">
+            Update Data
+          </button>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th>ID Card</th>
+            <th>NIM</th>
+            <th>Nama Mahasiswa</th>
+          </tr>
+        </thead>
+        <tbody id="dataTable">
+          <!-- Data akan dimasukkan di sini -->
+        </tbody>
+      </table>
+
+      <!-- Modal untuk konfirmasi penghapusan -->
+      <div
+        class="modal fade"
+        id="confirmDeleteModal"
+        tabindex="-1"
+        aria-labelledby="confirmDeleteModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmDeleteModalLabel">
+                Konfirmasi Hapus Data
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Apakah Anda yakin ingin menghapus data yang dipilih?
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Batal
+              </button>
+              <button
+                type="button"
+                id="confirmDeleteBtn"
+                class="btn btn-danger"
+              >
+                Lanjutkan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal untuk insert data -->
+      <div
+        class="modal fade"
+        id="insertDataModal"
+        tabindex="-1"
+        aria-labelledby="insertDataModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="insertDataModalLabel">
+                Insert UUID Card
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="insertDataForm">
+                <div class="mb-3">
+                  <label for="uuidCard" class="form-label">UUID Card</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="uuidCard"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal untuk update data -->
+      <div
+        class="modal fade"
+        id="updateDataModal"
+        tabindex="-1"
+        aria-labelledby="updateDataModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="updateDataModalLabel">
+                Update Data Mahasiswa
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="updateDataForm">
+                <div class="mb-3">
+                  <label for="updateNim" class="form-label">NIM</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="updateNim"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="updateNamaMhs" class="form-label"
+                    >Nama Mahasiswa</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="updateNamaMhs"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
