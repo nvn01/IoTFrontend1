@@ -1,6 +1,6 @@
-# Project IOT RFID Absensi
+# IOT RFID Attendance Project
 
-Proyek ini adalah tugas akhir untuk mata kuliah Cloud Computing, yang melibatkan pembuatan sistem absensi dengan tap kartu. Repository ini berisi bagian FrontEnd dari sistem tersebut.
+This project is a final assignment for the Cloud Computing course, involving the creation of an attendance system using card tapping. This repository contains the FrontEnd part of the system.
 
 ## Related Repositories
 
@@ -9,21 +9,33 @@ Proyek ini adalah tugas akhir untuk mata kuliah Cloud Computing, yang melibatkan
 
 ## Features
 
-- Dasbor untuk melihat data mahasiswa
-- Menambah dan memperbarui data mahasiswa
-- Menghapus data mahasiswa
-- Dasbor untuk melihat catatan absensi
+- Dashboard to view student data
+- Add and update student data
+- Delete student data
+- Dashboard to view attendance records
 
 ## Screenshots
 
-### Dashboard Mahasiswa
+### Student Dashboard
 
-![Dashboard Mahasiswa](screenshots/Screenshot%202024-06-27%20130747.png)
+![Student Dashboard](assets/Screenshot%202024-06-27%20130747.png)
 
-### History Absen Mahasiswa
+### Student Attendance History
 
-![History Absen Mahasiswa](screenshots/Screenshot%202024-06-27%20130756.png)
+![Student Attendance History](assets/Screenshot%202024-06-27%20130756.png)
 
-## URL Web App
+### IoT Architecture
 
-[URL Web App](http://frontendabsensi-env.eba-ypjm3kja.ap-southeast-2.elasticbeanstalk.com:3000/)
+![IoT Architecture](assets/Picture1.png)
+
+### Program Architecture
+
+![Program Architecture](assets/Picture2.png)
+
+### Using Demonstration
+
+![Demonstration](assets/demo.mp4)
+
+## Web App URL
+
+[Web App URL](http://frontendabsensi-env.eba-ypjm3kja.ap-southeast-2.elasticbeanstalk.com:3000/)
