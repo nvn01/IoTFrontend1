@@ -34,7 +34,7 @@ This project is a final assignment for the Cloud Computing course, involving the
 
 ### Using Demonstration
 
-![Demonstration](https://drive.google.com/drive/folders/1rXnDYuvQIIdJm0KllGQ9h7TkLMVvqxkn?usp=drive_link)
+[Demonstration](https://drive.google.com/drive/folders/1rXnDYuvQIIdJm0KllGQ9h7TkLMVvqxkn?usp=drive_link)
 
 ## Web App URL
 
